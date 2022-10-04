@@ -1,15 +1,19 @@
-variable "region" {
-  description = "AWS region"
-  default     = "us-west-1"
+variable "environment" {
+  description = "The environment name"
+  type        = string
 }
 
-variable "instance_type" {
-  description = "Type of EC2 instance to provision"
-  default     = "t2.micro"
+variable "psql_username" {
+  description = "The username for the database"
+  type        = string
 }
 
-variable "instance_name" {
-  description = "EC2 instance name"
-  default     = "Provisioned by Terraform"
+variable "psql_password" {
+  description = "The password for the database"
+  type        = string
 }
 
+variable "rds_instance_type" {
+  description = "The RDS instance type"
+  type        = string
+}
